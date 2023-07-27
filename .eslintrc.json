@@ -1,0 +1,67 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint", "import", "unused-imports"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+        "curly": "error",
+        "eqeqeq": "error",
+        "no-shadow": "off",
+        "no-else-return": "error",
+        "object-shorthand": "error",
+        "prefer-rest-params": "error",
+        "prefer-arrow-callback": ["error", { "allowNamedFunctions": true }],
+        "no-prototype-builtins": "error",
+        "no-param-reassign": ["error", { "props": true }],
+        "prefer-destructuring": [
+            "error",
+            {
+                "VariableDeclarator": { "array": false, "object": true },
+                "AssignmentExpression": { "array": false, "object": false }
+            },
+            { "enforceForRenamedProperties": false }
+        ],
+        "import/prefer-default-export": "off",
+        "import/extensions": "off",
+        "import/no-deprecated": "error",
+        "import/no-duplicates": "off",
+        "import/newline-after-import": "error",
+        "prefer-template": "error",
+        "radix": ["error", "as-needed"],
+        "padding-line-between-statements": [
+            "error",
+            { "blankLine": "always", "prev": ["block-like"], "next": "*" },
+            { "blankLine": "always", "prev": "*", "next": "return" }
+        ],
+        "unused-imports/no-unused-imports": "error",
+        "@typescript-eslint/no-shadow": "error",
+        "@typescript-eslint/ban-ts-comment": [
+            "error",
+            { "ts-ignore": "allow-with-description" }
+        ],
+        "@typescript-eslint/no-this-alias": "error",
+        "@typescript-eslint/no-var-requires": "error",
+        "@typescript-eslint/no-empty-function": "error",
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            {
+                "vars": "all",
+                "args": "none",
+                "ignoreRestSiblings": true
+            }
+        ],
+        "@typescript-eslint/no-explicit-any": [
+            "warn",
+            { "ignoreRestArgs": true }
+        ],
+        "@typescript-eslint/no-useless-constructor": ["error"],
+        "@typescript-eslint/ban-types": "error"
+    },
+    "env": {
+        "node": true
+    }
+}
